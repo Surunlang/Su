@@ -1,0 +1,8 @@
+G-M1	G-M2
+G-M2	G-M3
+G-M3	G-M4
+G-M4	G-M5
+X-M1	X-M2
+X-M2	X-M3
+X-M3	X-M4
+X-M4	X-M5
