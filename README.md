@@ -1,1 +1,2 @@
 # Su
+tts_tss_count.py这是用来统计classification文件的TSS和TTS的FSM情况，一般是过滤掉了10000以下序列，想降低标准可以自行调整
