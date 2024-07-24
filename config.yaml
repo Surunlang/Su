@@ -1,0 +1,56 @@
+genome: "DN.fasta" #填写参考基因组
+gtf: "DN.gtf"   #填写参考的gtf文件
+data_directory: "../data" #写出fastq所在的文件夹目录，相对或者绝对路径都可以
+samples: #样本(fastq文件前缀)
+   - "G-M1_L1_UDI069"
+   - "G-M1_L1_UDI068"
+   - "G-M1_L1_UDI070"
+   - "X-M1_L1_UDI073"
+   - "X-M1_L1_UDI071"
+   - "X-M1_L1_UDI072"
+   - "G-M2_L1_UDI050"
+   - "G-M2_L1_UDI051"
+   - "G-M2_L1_UDI052"
+   - "X-M2_L1_UDI054"
+   - "X-M2_L1_UDI055"
+   - "X-M2_L1_UDI053"
+   - "G-M3_L1_UDI057"
+   - "G-M3_L1_UDI056"
+   - "G-M3_L1_UDI058"
+   - "X-M3_L1_UDI059"
+   - "X-M3_L1_UDI060"
+   - "X-M3_L1_UDI061"
+   - "G-M4_L1_UDI062"
+   - "G-M4_L1_UDI063"
+   - "G-M4_L1_UDI064"
+   - "X-M4_L1_UDI065"
+   - "X-M4_L1_UDI066"
+   - "X-M4_L1_UDI067"
+   - "G-M5_L1_UDI075"
+   - "G-M5_L1_UDI076"
+   - "G-M5_L1_UDI080"
+   - "X-M5_L1_UDI078"
+   - "X-M5_L1_UDI079"
+   - "X-M5_L1_UDI077"
+libType: "unstranded"  #feactureCounts软件的选项，是选RF还是FR,还是unstranded
+TRINITY_HOME: "/ifs1/Vip/surunlang/trinityrnaseq" #trinity软件路径，要自己去github上下载
+de_method: "DESeq2" #填写用什么算表达矩阵，选DESeq2、limma或edgeR
+aligner: "hisat2" #填写比对软件，hisat2还是star比对
+samples_file: "samples.txt" #样本分组文件，举个例子：Cs1     Cs1_rep1
+                                                  #  Cs1     Cs1_rep2
+                                                    #Cs2     Cs2_rep1
+                                                    #Cs2     Cs2_rep2
+                                                    #Cs3     Cs3_rep1
+                                                    #Cs3     Cs3_rep2
+                                                    #Cs4     Cs4_rep1
+                                                    #Cs4     Cs4_rep2
+                                                    #Cs5     Cs5_rep1
+                                                    #Cs5     Cs5_rep2
+contrasts_file: "contrasts.txt"  #比较文件，想清楚你要和谁比较，例如
+                                                                    #Cs2     Cs1
+                                                                    #Cs3     Cs1
+                                                                    #Cs4     Cs1
+                                                                    #Cs5     Cs1
+featurecounts: "/ifs1/Vip/surunlang/snakemake/rnaseq_snakemake/software/RunFeatureCounts/run-featurecounts.R" #用R语言重写的featurecounts,在软件包里，使用时在自己服务器内确定好安装路径
+#counts:
+#yes_or_no:
