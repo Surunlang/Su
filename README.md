@@ -18,3 +18,11 @@ stat_hisat2bam_files.sh 这是用来统计Sample  Total   Unmapped (%)    Unique
 #final_classification.txt这个文件是SQANTI3运行的最终结果，可以去试试，这套组合针对的是iso-seq测序
 #coding_novel.py是用来承接rnasamba软件预测的结果，-t或者--tsv 输入rnasamb软件输出的tsv文件（rna_classification.tsv）即可，-i 再输入final_classification.txt文件即可，再输入-o my_species_dir(自定义文件夹)
 
+
+isforms_category2.py 软件是用来分类isoform。看看isoform里有哪些种类，-i输入final_classification.txt 文件即可
+
+isforms_sex_plot.py 软件是用来统计isoform的条数，即每个基因对应的isoforms条数分类，软件分为四种（1，2，3，4 or more) ，便于后续画图，-i输入文件，-s 输出统计文件，-o绘图
+#示例  python isforms_sex_plot.py -i  ../G_final/final_classification.txt -o 1.pdf -s isforms.summary.txt
+
+isforms_group2.py 软件是用来分类Annotated和Novel的软件，统计出gene条数，也是输入final_classification.txt
+#示例  python isforms_group2.py -i final_classification.txt ../G_final/final_classification.txt -o isforms_plot.pdf -s isforms_summary.txt
