@@ -26,3 +26,11 @@ isforms_sex_plot.py 软件是用来统计isoform的条数，即每个基因对�
 
 isforms_group2.py 软件是用来分类Annotated和Novel的软件，统计出gene条数，也是输入final_classification.txt
 #示例  python isforms_group2.py -i final_classification.txt ../G_final/final_classification.txt -o isforms_plot.pdf -s isforms_summary.txt
+
+
+#Iso-seq伪比对分析软件
+#承接SQANTI3软件比对功能，生成表达矩阵后通过R语言计算
+要准备SQANTI3软件（生成后处理些代码）生成的表达矩阵后，通过筛选，比如哪些只在对照组表达，哪些只在空白组表达，通过统计后获得Novel基因或者特有的isoform的分步
+还要提供对比文件，就是自己写谁和谁比较
+还要提供样本文件，这两个样本格式和trinity需要的格式一样
+
